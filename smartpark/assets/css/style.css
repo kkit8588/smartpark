@@ -1,0 +1,142 @@
+/*CUSTOM FONT FAMILY online*/
+/*@font-face {
+  font-family: 'Inter';
+  src: url('../plugins/inter-font/Inter-VariableFont_slnt,wght.ttf') format('ttf'),
+
+}
+*/
+
+:root{
+	--light: #D1E2C4;
+	--dark-blue: #1a7bc2;
+	--white: #ffffff;
+	--black: #040000;
+
+	--opacity-gray: rgba(24, 49, 83, 0.2);
+
+	--font-family: 'Source Sans Pro', sans-serif;
+}
+
+*{	
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family) !important;
+}
+body{
+	height: 100vh;
+}
+/*======================================
+						BOOTSRAP CUSTOMIZE
+=======================================*/
+.modal-header{
+	background-color: var(--dark-blue) !important;
+	color: var(--white) !important;
+}
+
+/*datatable excel custome buttons*/
+.buttons-html5{
+   background-color: #087b38 !important;
+}
+/*======================================
+								TOGGLE
+=======================================*/
+.side-bar.toggle{
+	width: 70px;
+}
+.side-bar.toggle .text-span{
+	display: none;
+}
+.side-bar .text-span{
+	white-space: nowrap;
+	width: 20px;
+}
+.content.toggle{
+	left: 70px;
+	width: calc(100% - 70px);
+}
+/*======================================
+	side-bar
+=======================================*/
+.side-bar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 0 0;
+	width: 250px;
+	transition: width 0.2s ease;
+	z-index: 10;
+	background: var(--dark-blue);
+}
+
+.nav-item {
+	border-radius: 4px;
+	font-weight: 500;
+	color: var(--white);
+}
+.logout:hover,
+.nav-item:hover,
+.active{
+	background: var(--white);
+	color: #000;
+
+}
+li .nav-link{
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+	position: relative;
+}
+.icon-span{
+	display: flex;
+	width: 25px;
+}
+.tooltips{
+	display: none;
+}  
+/*======================================
+		CONTENT
+=======================================*/
+.content{
+	width: calc(100% - 250px);
+	position: relative;
+	top: 0;
+	left: 250px;
+	transition: all 0.2s ease;
+}
+
+@media (max-width: 900px){
+	.side-bar{
+		z-index: 1000 !important;
+		width: 70px;
+	}
+	.content{
+		width: unset;
+		left: unset;
+	}
+	.side-bar.toggle{
+		width: 250px;
+	}
+	.side-bar .text-span{
+		display: none;
+	}
+	.content{
+		left: 70px;
+		width: calc(100% - 70px);
+	}
+
+	.nav-link:hover .tooltips{
+		display: flex;
+		left: 66px;
+		top: 1px;
+		position: absolute;
+		width: auto;
+		background: #0d6efd;
+		color: var(--white) !important;
+		border-radius: 4px;
+	} 
+	.icon-span{
+		margin: auto;
+	}
+
+}
